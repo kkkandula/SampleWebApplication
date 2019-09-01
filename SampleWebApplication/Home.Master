@@ -1,0 +1,248 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="SampleWebApplication.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+      <style type="text/css">
+        .button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+}
+        .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+        .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+        .btn-primary {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+    z-index: 1;
+    left: 14px;
+    top: 136px;
+    position: absolute;
+    width: 141px;
+}
+               .col-xs-1,
+        .col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11 {
+  float: left;
+}
+
+.col-xs-1 {
+  width: 8.333333333333332%;
+}
+
+.col-xs-2 {
+  width: 16.666666666666664%;
+}
+
+.col-xs-3 {
+  width: 25%;
+}
+
+.col-xs-4 {
+  width: 33.33333333333333%;
+}
+
+.col-xs-5 {
+  width: 41.66666666666667%;
+}
+
+.col-xs-6 {
+  width: 50%;
+}
+
+.col-xs-7 {
+  width: 58.333333333333336%;
+}
+
+.col-xs-8 {
+  width: 66.66666666666666%;
+}
+
+.col-xs-9 {
+  width: 75%;
+}
+
+.col-xs-10 {
+  width: 83.33333333333334%;
+}
+
+.col-xs-11 {
+  width: 91.66666666666666%;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+.label-primary {
+  background-color: #428bca;
+}
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+    z-index: 1;
+    left: 368px;
+    top: 327px;
+    position: absolute;
+}
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #3071a9;
+}
+
+.backimg{
+
+            background-image:url(Images/Login.jpg);
+            background-color:transparent;
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size:cover;
+        }
+
+    </style>
+   <script type="text/javascript">
+       history.pushState(null, null, location.href);
+       window.onpopstate = function () {
+           history.go(1);
+       };
+    </script>
+    
+</head>
+<body style="position:fixed"  >
+    <form id="form1" runat="server" >
+   
+      <table style="font-family:Arial">
+    <tr>
+        <td colspan="2" style=" width:1356px; height:80px; background-color:navy;padding:0px;
+            text-align:center">
+            <h1 class="header center"  style="font-family:'Segoe UI'; color:white">
+                 Employee Application</h1>
+        </td>
+    </tr>
+    <tr>
+        <td style=" width:250px;background-image:url(Images/images.jpg);background-position:center;background-repeat:no-repeat;background-size:cover">
+            <asp:LinkButton CssClass="btn  btn-primary"  ID="LoginButton" runat="server"  PostBackUrl="~/Login.aspx" OnClick="LoginButtonClick" >Login</asp:LinkButton><br/>
+            <asp:LinkButton CssClass="btn  btn-primary"  ID="AboutButton" runat="server"  PostBackUrl="~/About Us.aspx" OnClick="AboutButtonClick" style="top:261px" >About Us</asp:LinkButton><br/>
+            <asp:LinkButton CssClass="btn  btn-primary"  ID="ContactButton" runat="server"  PostBackUrl="~/Contact Us.aspx" OnClick="ContactButtonClick" style="top:379px" >Contact Us</asp:LinkButton>
+           
+        </td>
+        <td style="height: 550px;" class="backimg">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="background-color:blue; text-align:center">
+            <b>Website Footer</b>
+        </td>
+    </tr>
+</table>
+
+
+    </form>
+</body>
+</html>

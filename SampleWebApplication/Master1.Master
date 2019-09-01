@@ -1,0 +1,283 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="SampleWebApplication.Master1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+	    <style type="text/css">
+        .button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+}
+        .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+        .form-control {
+  display: block;
+  width: 188px;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+        .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+        .btn-primary {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+    z-index: 1;
+    left: 11px;
+    top: 136px;
+    position: absolute;
+    width: 141px;
+}
+               .col-xs-1,
+        .col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11 {
+  float: left;
+}
+
+.col-xs-1 {
+  width: 8.333333333333332%;
+}
+
+.col-xs-2 {
+  width: 16.666666666666664%;
+}
+
+.col-xs-3 {
+  width: 25%;
+}
+
+.col-xs-4 {
+  width: 33.33333333333333%;
+}
+
+.col-xs-5 {
+  width: 41.66666666666667%;
+}
+
+.col-xs-6 {
+  width: 50%;
+}
+
+.col-xs-7 {
+  width: 58.333333333333336%;
+}
+
+.col-xs-8 {
+  width: 66.66666666666666%;
+}
+
+.col-xs-9 {
+  width: 75%;
+}
+
+.col-xs-10 {
+  width: 83.33333333333334%;
+}
+
+.col-xs-11 {
+  width: 91.66666666666666%;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+    z-index: 1;
+    left: 368px;
+    top: 327px;
+    position: absolute;
+}
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #3071a9;
+}
+
+.backimg{
+
+            background-image:url(Images/bg.jpg);
+            background-color:transparent;
+            background-repeat:no-repeat;
+            background-position:center;
+            background-size:cover;
+            position:absolute;
+        }
+
+    </style>
+
+   <%-- <script type="text/javascript">
+        function preventBack() { alert("HI"); window.history.forward(); }
+
+       
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+
+      
+    </script>--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="position:fixed" >
+    <form id="form1" runat="server"  >
+		<table style="height:700px;width:1360px" class="backimg">
+			<tr style="left: 0px; top: 0px; position: absolute; height: 197px; width: 1024px; color:white">
+				<td  colspan="2" style="height:80px">
+<asp:Panel ID="Panel1" runat="server" style="z-index: 1; left: 0px; top: 0px; position: absolute; height: 768px; width: 1357px">
+                    <h1 style=" height:50px; text-align:left; background-color:navy; margin-top: -3px;">&nbsp;&nbsp Tech Mahindra Details</h1> </asp:Panel>
+				 <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Style=" z-index: 1; left: 1007px; top: 5px;
+            position: absolute; color: #FFFFFF; height: 32px; width: 141px;" Text="Logout"
+            BackColor="#2682B5" OnClick="btnlogout_Click" ForeColor="#0000CC " ValidationGroup="Login" />
+
+				</td>
+
+			</tr>
+			
+
+			<tr style="left: 0px; top: 50px; position: absolute; height: 45px; width: 1357px; background-color:black">
+
+				<td style="color:whitesmoke" >
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Organization.aspx" style="z-index: 1; left: 24px; top: 12px; position: absolute;color:white" >Organization</asp:HyperLink>
+					<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Registration.aspx" style="z-index: 1; left: 202px; top: 12px; position: absolute;color:white" >Create Employee</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/EmployeeList.aspx" style="z-index: 1; left: 396px; top: 12px; position: absolute;color:white" >Employee List</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Recruitment.aspx" style="z-index: 1; left: 585px; top: 12px; position: absolute;color:white" >Recruitments</asp:HyperLink>
+                      <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Admin.aspx" style="z-index: 1; left: 742px; top: 12px; position: absolute;color:white" >Background Check</asp:HyperLink>
+              
+
+                   <%-- <ul id="menu">
+                        <li id="link1" runat="server" style="z-index: 1; left: 24px; top: 12px; position: absolute;color:white" ><a href="Organization.aspx">Organization</a></li>
+                        <li id="link2" runat="server" ><a href="Registration.aspx" style="z-index: 1; left: 202px; top: 12px; position: absolute;color:white" >Organization</a></li>
+                        <li id="link3" runat="server" ><a href="EmployeeList.aspx"  style="z-index: 1; left: 396px; top: 12px; position: absolute;color:white">Organization</a></li>
+                        
+                        <li id="link4" runat="server" ><a href="Recruitment.aspx" style="z-index: 1; left: 585px; top: 12px; position: absolute;color:white" >Organization</a></li>
+                        <li id="link5" runat="server" ><a href="Admin.aspx" style="z-index: 1; left: 799px; top: 11px; position: absolute;color:white">Organization  </a></li>
+                    </ul>
+                   --%>   <b>  <asp:Label ID="lblRole" runat="server" style="z-index: 1; left:1033px; top: 12px; position: absolute;color:white;font-size
+    :larger"></asp:Label></b>
+                    
+				</td>
+
+				</tr>
+			<tr >
+				<td>
+					<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        
+				</td>
+			     </tr>
+		</table>
+       
+           
+    </form>
+</body>
+</html>
+
+
+   
